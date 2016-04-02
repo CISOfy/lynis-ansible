@@ -1,0 +1,26 @@
+---
+
+
+
+- name: Lynis | Install Lynis (Debian | Ubuntu)
+  include: debian.yml
+  when:
+    (ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu') and
+    (lynis_use_packages is defined and lynis_use_packages)
+  tags: lynis
+
+
+
+- name: Lynis | Install Lynis (CentOS | RHEL)
+  include: rhel.yml
+  when:
+    (ansible_os_family == 'CentOS' or ansible_os_family == 'RedHat') and
+    (lynis_use_packages is defined and lynis_use_packages)
+  tags: lynis
+
+
+
+- name: Lynis | Install Lynis manually (OS-independent)
+  include: manual.yml
+  when: lynis_use_packages is defined and not lynis_use_packages
+  tags: lynis

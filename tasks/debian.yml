@@ -1,0 +1,11 @@
+---
+
+- name: Lynis | Install Lynis from apt
+  apt:
+    name=lynis
+    state=present
+    force=no
+    install_recommends=no
+    update_cache=yes
+  register: lynis_isinstalled
+  tags: lynis

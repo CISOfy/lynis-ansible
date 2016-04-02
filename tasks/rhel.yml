@@ -1,0 +1,12 @@
+---
+
+
+
+- name: Lynis | Install Lynis from yum
+  yum:
+    name: lynis
+    state: present
+    update_cache: yes
+    disable_gpg_check: no
+  register: lynis_isinstalled
+  tags: lynis
