@@ -12,7 +12,7 @@ lynis_tarball_checksum: '64fe15be52fa77bce14250867da87e8c262fb0e9229517c4e2d2d5a
 
 lynis_tarball_unpackdest: '/opt'
 lynis_tarball_unpackdest_dir: '{{ lynis_tarball_unpackdest }}/lynis'
-lynis_tarball_dest: '{{ lynis_tarball_unpackdest_dir }}{{ lynis_name }}.tar.gz'
+lynis_tarball_dest: '{{ lynis_tarball_unpackdest_dir }}/{{ lynis_name }}.tar.gz'
 
 
 

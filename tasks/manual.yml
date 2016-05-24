@@ -29,6 +29,7 @@
   unarchive:
     dest={{ lynis_tarball_unpackdest }}
     src={{ lynis_tarball_dest }}
+    copy=no
   tags: lynis
 
 
